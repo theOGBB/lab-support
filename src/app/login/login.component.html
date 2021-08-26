@@ -1,0 +1,13 @@
+<h1>Login</h1>
+
+<label>User Name: </label>
+<input id="txtUserName" [(ngModel)]="creds.user_name" placeholder="Username">
+
+<br/>
+
+<label>Password: </label>
+<input id="txtPassword" [(ngModel)]="creds.password" placeholder="Password">
+
+<br />
+
+<button type="button" id="btnLogin" (click)="login()">Login</button>
