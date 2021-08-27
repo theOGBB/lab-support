@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Login } from './login';
 import { AuthenticateService } from '../authenticate.service';
 import { User } from '../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +16,7 @@ export class LoginComponent implements OnInit {
     password: ""
   };
 
-  user: User = {
-    id: "",
-    user_name: "",
-    active_token: ""
-  };
-
-  constructor(private authService: AuthenticateService) { 
+  constructor(private authService: AuthenticateService, private router: Router) { 
     
   }
 
@@ -34,7 +29,8 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     this.authService.authenticate(this.creds).subscribe(user => { 
-      alert(JSON.stringify(user)); 
+      localStorage.setItem('loggedInUser', JSON.stringify(user));
+      this.router.navigate(['/']);
     });    
   }
 }
