@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Project } from '../models/project';
+import { WorkItemType } from '../models/workItemType';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,14 @@ export class AzureDevopsService {
 
       return {unsubscribe() {}};
     });
+  }
+
+  getWorkItemTypes(token:string, org: string, project: Project): Observable<Array<WorkItemType>> {
+    return new Observable((obs) => {
+      obs.next([{id: 1, name: "Requirement"}, {id: 2, name: "Bug"}]);
+      obs.complete();
+
+      return {unsubscribe() {}};
+    })
   }
 }
