@@ -8,13 +8,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { TicketFormEditorComponent } from './ticket-form-editor/ticket-form-editor.component';
+import { TextFieldComponent } from './ticket-form-editor/controls/text-field/text-field.component';
+import { SetupComponent } from './setup/setup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MainComponent,
-    TicketFormEditorComponent
+    TicketFormEditorComponent,    
+    TextFieldComponent, SetupComponent
   ],
   imports: [
     BrowserModule,

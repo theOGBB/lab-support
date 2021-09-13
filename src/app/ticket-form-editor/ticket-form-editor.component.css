@@ -1,0 +1,12 @@
+#ticket-form {
+    width: 60%;
+    border: 1px solid black;
+}
+
+#controls-list {
+    width: 35%;
+    float: right;
+    display: block;
+
+    border: 1px solid black;
+}

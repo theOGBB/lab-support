@@ -1,0 +1,22 @@
+<h2>First Time Setup</h2>
+<br />
+
+<span>Personal Access Token: </span>
+<input name="token" id="token" type="password" />
+
+<br />
+
+<span>Organization: </span>
+<input name="organization" id="organization" type="text" />
+
+<br />
+
+<span>Project: </span>
+<select name="project" id="project" (click)="displayProjects()">
+    <option *ngFor="let p of projects" [value]="p.id">{{p.name}}</option>
+</select>
+
+<br />
+<span>Work Item Type: </span>
+<select name="wit" id="wit" (click)="displayWorkItemTypes()">    
+</select>
