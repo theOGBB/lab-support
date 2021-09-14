@@ -8,7 +8,13 @@ import { TextFieldComponent } from './controls/text-field/text-field.component';
 })
 export class TicketFormEditorComponent implements OnInit {
 
-  data: any;
+  layoutData = [{
+    type: "text",
+    name: "test",
+  }, {
+    type: "text",
+    name: "test2"
+  }];
 
   constructor() { }
 

@@ -1,9 +1,12 @@
-<h1>Edit The Ticket Form</h1>
+<h1>Ticket Editor</h1>
 
-<div id="controls-list">
-    
+<div id="fieldList">
+
 </div>
 
-<div id="ticket-form">
-    {{data}}
+<div id="preview">
+    <ng-container *ngFor="let field of layoutData">
+        <app-text-field [name]="field.name"></app-text-field>
+    </ng-container>
 </div>
+

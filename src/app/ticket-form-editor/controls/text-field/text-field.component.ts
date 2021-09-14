@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-text-field',
@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextFieldComponent implements OnInit {
   value: string = "";
-  name: string = "";
+  @Input() name: string = "";
 
   constructor() { 
-    this.name = "test";
+
   }
 
   ngOnInit(): void {

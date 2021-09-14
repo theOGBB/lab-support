@@ -1,11 +1,8 @@
-class TextField extends Field {
+class TextField {
     value: String = "";
-    default_value: String = "Enter Text Here";
     name: String;
     
     constructor(name: String) {
-        super("text");
-
         this.name = name;
     }
 
